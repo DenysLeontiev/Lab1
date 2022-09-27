@@ -30,7 +30,7 @@ float GetValue(float h)
 
 int main()
 {
-    float a,b;
+    float a,b,n;
 
     cout << "Enter a: ";
     cin >> a;
@@ -50,7 +50,16 @@ int main()
         return 0;
     }
 
-    float h = (a - b) / 2;
+    cout << "Enter n: ";
+    cin >> n;
+
+    if (cin.fail())
+    {
+        cout << "Wrong type in n";
+        return 0;
+    }
+
+    float h = (a - b) / n;
 
     float result = GetValue(h);
     cout << "The final result is: " << result;
